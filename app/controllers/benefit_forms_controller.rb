@@ -9,7 +9,7 @@ class BenefitFormsController < ApplicationController
    begin
      path = params[:name]
      file = params[:type].constantize.new(path)
-     send_file file, disposition: "attachment"
+     #2
    rescue
      redirect_to user_benefit_forms_path(user_id: current_user.id)
    end
